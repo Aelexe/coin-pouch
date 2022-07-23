@@ -1,0 +1,8 @@
+## Project
+# Build
+obj/
+bin/
+
+## Language
+# C#/Visual Studio
+.vs/
