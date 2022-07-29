@@ -273,14 +273,12 @@ namespace CoinPouch {
 
             stringBuilder.AddUiForeground((ushort)(0x223 + item.Rarity * 2));
             stringBuilder.AddUiGlow((ushort)(0x224 + item.Rarity * 2));
-            stringBuilder.AddItemLink(item.RowId, false);
 
             stringBuilder.AddUiForeground(0);
             stringBuilder.AddUiGlow(0);
             stringBuilder.AddText(CurrencyUtil.GetName(currency));
 
-            stringBuilder.Add(new RawPayload(new byte[] { 0x02, 0x27, 0x07, 0xCF, 0x01, 0x01, 0x01, 0xFF, 0x01, 0x03 }));
-            stringBuilder.Add(new RawPayload(new byte[] { 0x02, 0x13, 0x02, 0xEC, 0x03 }));
+            stringBuilder.AddUiForeground(1);
             stringBuilder.AddText($" {quantity}/{CurrencyUtil.GetMaximum(currency)}");
 
             Vendor[] vendors = CurrencyUtil.GetVendors(currency);
