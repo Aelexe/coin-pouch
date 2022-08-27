@@ -111,7 +111,7 @@ namespace CoinPouch {
         }
 
         private void OnUpdate(Framework framework) {
-            if(Condition[ConditionFlag.BetweenAreas]) {
+            if(!IsSafeToWork()) {
                 return;
             }
 
@@ -130,12 +130,12 @@ namespace CoinPouch {
                 // Only send zoning alerts if they are enabled and zoning alerts aren't in timeout, or if the zoning timeout has changed.
                 if(config.zoningAlerts && (!zoningAlertTimeout || config.zoningAlertsTimeout != lastZoningAlertTimeout)) {
                     if(config.zoningAlertsTimeout > 0) {
-                    // Set the timeout.
-                    zoningAlertTimeout = true;
-                    lastZoningAlertTimeout = config.zoningAlertsTimeout;
+                        // Set the timeout.
+                        zoningAlertTimeout = true;
+                        lastZoningAlertTimeout = config.zoningAlertsTimeout;
 
-                    // Set the timer to reset the timeout.
-                    Timeout(() => { zoningAlertTimeout = false; }, config.zoningAlertsTimeout * 60 * 1000);
+                        // Set the timer to reset the timeout.
+                        Timeout(() => { zoningAlertTimeout = false; }, config.zoningAlertsTimeout * 60 * 1000);
                     }
 
                     // Send the alerts.
@@ -169,8 +169,17 @@ namespace CoinPouch {
         private void OnCommand(string command, string args) {
             if(args == "debug") {
                 SendAllAlerts(false, true);
+            } else {
+                ui.isVisible = !ui.isVisible;
             }
-            ui.isVisible = !ui.isVisible;
+        }
+
+        private bool IsSafeToWork() {
+            if(Condition[ConditionFlag.BetweenAreas] || Condition[ConditionFlag.BoundByDuty] || Condition[ConditionFlag.OccupiedInCutSceneEvent]) {
+                return false;
+            }
+
+            return true;
         }
 
         private void LoadInitialQuantities() {
@@ -199,9 +208,9 @@ namespace CoinPouch {
                     continue;
                 }
 
-                Currency? nullishCurrency = CurrencyUtil.GetById(currencyId);
+                Currency? nullableCurrency = CurrencyUtil.GetById(currencyId);
 
-                if(!nullishCurrency.HasValue) {
+                if(!nullableCurrency.HasValue) {
                     continue;
                 }
 
@@ -236,9 +245,9 @@ namespace CoinPouch {
                     continue;
                 }
 
-                Currency? nullishCurrency = CurrencyUtil.GetById(currencyId);
+                Currency? nullableCurrency = CurrencyUtil.GetById(currencyId);
 
-                if(!nullishCurrency.HasValue) {
+                if(!nullableCurrency.HasValue) {
                     continue;
                 }
 
