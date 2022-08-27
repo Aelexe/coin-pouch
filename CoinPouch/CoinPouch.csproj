@@ -1,7 +1,7 @@
 <Project Sdk="Microsoft.NET.Sdk">
 	<PropertyGroup>
 		<Description>Coin Pouch</Description>
-		<Version>0.0.1</Version>
+		<Version>0.0.1.1</Version>
 		<LangVersion>10</LangVersion>
 	</PropertyGroup>
 
