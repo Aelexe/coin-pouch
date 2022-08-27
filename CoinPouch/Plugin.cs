@@ -197,7 +197,13 @@ namespace CoinPouch {
                     continue;
                 }
 
-                Currency currency = (Currency)CurrencyUtil.GetById(currencyId)!;
+                Currency? nullishCurrency = CurrencyUtil.GetById(currencyId);
+
+                if(!nullishCurrency.HasValue) {
+                    continue;
+                }
+
+                Currency currency = CurrencyUtil.GetById(currencyId)!.Value;
 
                 int quantity = CurrencyUtil.GetQuantity(currency);
 
@@ -228,7 +234,13 @@ namespace CoinPouch {
                     continue;
                 }
 
-                Currency currency = (Currency)CurrencyUtil.GetById(currencyId)!;
+                Currency? nullishCurrency = CurrencyUtil.GetById(currencyId);
+
+                if(!nullishCurrency.HasValue) {
+                    continue;
+                }
+
+                Currency currency = CurrencyUtil.GetById(currencyId)!.Value;
 
                 int quantity = CurrencyUtil.GetQuantity(currency);
                 int previousQuantity = 0;
