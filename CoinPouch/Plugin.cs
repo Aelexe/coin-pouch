@@ -129,12 +129,14 @@ namespace CoinPouch {
 
                 // Only send zoning alerts if they are enabled and zoning alerts aren't in timeout, or if the zoning timeout has changed.
                 if(config.zoningAlerts && (!zoningAlertTimeout || config.zoningAlertsTimeout != lastZoningAlertTimeout)) {
+                    if(config.zoningAlertsTimeout > 0) {
                     // Set the timeout.
                     zoningAlertTimeout = true;
                     lastZoningAlertTimeout = config.zoningAlertsTimeout;
 
                     // Set the timer to reset the timeout.
                     Timeout(() => { zoningAlertTimeout = false; }, config.zoningAlertsTimeout * 60 * 1000);
+                    }
 
                     // Send the alerts.
                     Timeout(SendAllAlerts, 1000);
