@@ -6,10 +6,10 @@ namespace CoinPouch.Data {
     public enum Currency {
         [Name("Tomestone of Poetics"), ID(28), Maximum(2000), DefaultThreshold(1400), Category("Battle"), Vendors(Vendor.RowenaRepLimsa, Vendor.RowenaRepGridania, Vendor.RowenaRepUldah, Vendor.Auriana, Vendor.RowenaRepIshgard, Vendor.RowenaRepKugane, Vendor.MowensMerchant)]
         TomestoneOfPoetics,
-        [Name("Tomestone of Aphorism"), ID(42), Maximum(2000), DefaultThreshold(1700), Category("Battle"), Vendors(Vendor.Cihanti)]
-        TomestoneOfAphorism,
         [Name("Tomestone of Astronomy"), ID(43), Maximum(2000), DefaultThreshold(1700), Category("Battle"), Vendors(Vendor.Cihanti)]
         TomestoneOfAstronomy,
+        [Name("Tomestone of Causality"), ID(44), Maximum(2000), DefaultThreshold(1700), Category("Battle"), Vendors(Vendor.Cihanti)]
+        TomestoneOfCausality,
 
         [Name("Storm Seal"), ID(20), Maximum(75000), DefaultThreshold(75000), Category("Common"), Vendors(Vendor.StormQuartermaster)]
         StormSeal,
