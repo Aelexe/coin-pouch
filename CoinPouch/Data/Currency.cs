@@ -32,13 +32,13 @@ namespace CoinPouch.Data {
         [Name("Bicolor Gemstone"), ID(26807), Maximum(1000), DefaultThreshold(800), Category("Battle"), Vendors(Vendor.Gramsol, Vendor.Pedronille, Vendor.Siulmet, Vendor.Zumutt, Vendor.Halden, Vendor.SulLad, Vendor.Nacille, Vendor.GoushsOoan, Vendor.Gadfrid, Vendor.Sajareen, Vendor.Faezbroes, Vendor.Mahveydah, Vendor.Zawawa, Vendor.Tradingway, Vendor.Aisara, Vendor.N1499)]
         BicolorGemstone,
 
-        [Name("White Crafters' Scrip"), ID(25199), Maximum(2000), DefaultThreshold(1500), Category("Other")]
+        [Name("White Crafters' Scrip"), ID(25199), Maximum(4000), DefaultThreshold(3500), Category("Other")]
         WhiteCraftersScrip,
-        [Name("Purple Crafters' Scrip"), ID(33913), Maximum(2000), DefaultThreshold(1500), Category("Other")]
+        [Name("Purple Crafters' Scrip"), ID(33913), Maximum(4000), DefaultThreshold(3500), Category("Other")]
         PurpleCraftersScrip,
-        [Name("White Gatherers' Scrip"), ID(25200), Maximum(2000), DefaultThreshold(1500), Category("Other")]
+        [Name("White Gatherers' Scrip"), ID(25200), Maximum(4000), DefaultThreshold(3500), Category("Other")]
         WhiteGatherersScrip,
-        [Name("Purple Gatherers' Scrip"), ID(33914), Maximum(2000), DefaultThreshold(1500), Category("Other")]
+        [Name("Purple Gatherers' Scrip"), ID(33914), Maximum(4000), DefaultThreshold(3500), Category("Other")]
         PurpleGatherersScrip,
         [Name("Skybuilders' Scrip"), ID(28063), Maximum(10000), DefaultThreshold(7500), Category("Other")]
         SkybuildersScrip
