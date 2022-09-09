@@ -13,6 +13,7 @@
 		<AllowUnsafeBlocks>true</AllowUnsafeBlocks>
 		<ProduceReferenceAssembly>false</ProduceReferenceAssembly>
 		<AppendTargetFrameworkToOutputPath>false</AppendTargetFrameworkToOutputPath>
+		<RestorePackagesWithLockFile>true</RestorePackagesWithLockFile>
 		<OutputPath>$(AppData)\XIVLauncher\devPlugins\CoinPouch\</OutputPath>
 		<DalamudLibPath>$(AppData)\XIVLauncher\addon\Hooks\dev\</DalamudLibPath>
 	</PropertyGroup>
