@@ -3,7 +3,7 @@
   "Name": "Coin Pouch",
   "Punchline": "Currency alerts and convenient teleports.",
   "Description": "Currency alerts and convenient teleports.",
-  "Changelog": "Release v0.0.1.1\n-- Features\n- Updated for Dalamud API 7\n- Updated currencies and currency caps for patch 6.2",
+  "Changelog": "Release v0.0.1.2\n-- Features\n- Updated for Dalamud API 8\n- Updated NET 7.0",
   "Tags": [
     "plugin",
     "currency",
