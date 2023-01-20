@@ -11,11 +11,11 @@ namespace CoinPouch.Data {
         [Name("Tomestone of Causality"), ID(44), Maximum(2000), DefaultThreshold(1700), Category("Battle"), Vendors(Vendor.Cihanti)]
         TomestoneOfCausality,
 
-        [Name("Storm Seal"), ID(20), Maximum(75000), DefaultThreshold(75000), Category("Common"), Vendors(Vendor.StormQuartermaster)]
+        [Name("Storm Seal"), ID(20), Maximum(90000), DefaultThreshold(90000), Category("Common"), Vendors(Vendor.StormQuartermaster)]
         StormSeal,
-        [Name("Serpent Seal"), ID(21), Maximum(75000), DefaultThreshold(75000), Category("Common"), Vendors(Vendor.SerpentQuartermaster)]
+        [Name("Serpent Seal"), ID(21), Maximum(90000), DefaultThreshold(90000), Category("Common"), Vendors(Vendor.SerpentQuartermaster)]
         SerpentSeal,
-        [Name("Flame Seal"), ID(22), Maximum(75000), DefaultThreshold(75000), Category("Common"), Vendors(Vendor.FlameQuartermaster)]
+        [Name("Flame Seal"), ID(22), Maximum(90000), DefaultThreshold(90000), Category("Common"), Vendors(Vendor.FlameQuartermaster)]
         FlameSeal,
 
         [Name("Wolf Mark"), ID(25), Maximum(20000), DefaultThreshold(18000), Category("Battle"), Vendors(Vendor.MarkQuartermaster)]
